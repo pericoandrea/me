@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'Michella Garden';
+    src: url("fonts/MichellaGarden400.otf") format("opentype");
+}
+
+body {
+    background-color: #ACA18FD6;
+    min-height: 320px;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    // grid-template-rows: 1fr;
+    padding-top: 30px;
+}
+header img{
+    width: 100%;
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    top: 5px;
+    z-index: -1;
+    min-width: 300px;
+    max-height: 250px;
+}
+.header-name{
+    grid-column: 2;
+    grid-row: 1;
+    z-index: 1;
+    position: relative;
+}
+.header-name .header-name_firstname {
+    font-family: 'Michella Garden';
+    font-size: 60px;
+    color: #B92B88;
+    position: absolute;
+    margin: 0;
+    left: 46px
+}
+
+.header-name .header-name_lastname {
+    font-family: 'Quicksand', sans-serif;
+    display: block;
+    color: white;
+    font-size: 43px;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    top: 30px;
+    letter-spacing: 2px;
+}
+nav{
+    background-color: #F5CC2AF5;
+    height: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.nav-footer {
+    background-color: initial;
+    padding: 20px;
+}
+.nav-item {
+    position: relative;
+}
+.nav-item img{
+    width: 80%;
+    min-width: 150px;
+
+}
+.nav-item p{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Michella Garden';
+    font-size: 38px;
+    color: white;
+}
+.nav-footer .nav-item{
+	position: relative;
+	width: 180px;		/* desired width */
+}
+.nav-footer .nav-item:before{
+	content: "";
+	display: block;
+    padding-top: 100%; 	/* ratio of 1:1*/
+    margin: 0 auto;
+}
+
+.nav-footer .nav-item img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: red;
+  width: 80%;
+  margin: 0 auto;
+  border: 4px solid #8a80a8;
+}
+footer .icons {
+    display: flex;
+    justify-content: center;    
+}
+@media screen and (max-width:768px){
+    header {
+        padding-top: 15px;
+    }
+    .header-name .header-name_firstname {
+        font-size: 44px;
+        left: 36px
+    }
+    .header-name .header-name_lastname {
+        font-size: 32px;
+        top:22px;
+    }
+}

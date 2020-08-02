@@ -1,0 +1,27 @@
+-var titulo = "Un titulo"
+-var imagenes = [["assets/caldera.jpg","Hobbies"],["assets/bride.jpg","Events"],["assets/family.jpg","Family"],["assets/friends.jpg","Friends"], ["assets/shaved.jpg","Style"]];
+mixin caja(imagen, titulo)
+	.home-nav-item
+		img(src=imagen, alt="")
+		p #{titulo}
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title María Andrea Perico M
+		link(rel="stylesheet", href="./css/test.css")
+	body
+		.home-container
+			.home-nav-container
+				.container
+					each imagen in imagenes
+						+caja(imagen[0],imagen[1])
+			.home-main-containe
+				.home-main-title
+					p.main-title-time 2016
+					h1 La Caldera
+				.home-main-image: img(src="assets/caldera.jpg", alt="")
+				.home-main-background: img(src="assets/backgruond - Copy.png", alt="")
+				
+		
