@@ -1,18 +1,17 @@
 import getData from '../utils/getData';
+import getHash from '../utils/getHash';
 
 const Home = async () => {
-  const characters = await getData();
+  const id = getHash()
+  console.log(id)
+  const detail = await getData(id);
   const view = `
-    <div class="Characters">
-      ${characters.results.map(character => `
-        <article class="Character-item">
-          <a href="#/${character.id}/">
-            <img src="${character.image}" alt="${character.name}">
-            <h2>${character.name}</h2>
-          </a>
-        </article>
-      `).join('')}
-    </div>
+  <div class="round"><img src="./assets/${detail.photo}" alt="...">
+  <h1>${detail.title}</h1>
+</div>
+<p class="title">${detail.span}</p>
+<p>${detail.paragraph}</p>
+
   `;
   return view;
 };

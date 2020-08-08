@@ -1,14 +1,33 @@
-const API = 'https://rickandmortyapi.com/api/character/';
-
-const getData = async (id) => {
-  const apiURl = id ? `${API}${id}` : API;
-  try {
-    const response = await fetch(apiURl);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.log('Fetch Error', error);
-  };
-};
+const dataArray = [
+  {
+    id: '1',
+    title: 'Familia',
+    photo: 'familia.png',
+    span: 'Soy',
+    paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sapiente distinctio dolorem, nemo explicabo nesciunt necessitatibus debitis consectetur consequatur itaque quos voluptas laboriosam porro, provident corrupti iste accusantium, unde quae.'
+  },
+  {
+    id: '2',
+    title: 'Estilo',
+    photo: 'bride.jpg',
+    span: 'Soy',
+    paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sapiente distinctio dolorem, nemo explicabo nesciunt necessitatibus debitis consectetur consequatur itaque quos voluptas laboriosam porro, provident corrupti iste accusantium, unde quae.'
+  },
+  {
+    id: '3',
+    title: 'Transporte',
+    photo: 'bici.jpg',
+    span: 'Soy',
+    paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sapiente distinctio dolorem, nemo explicabo nesciunt necessitatibus debitis consectetur consequatur itaque quos voluptas laboriosam porro, provident corrupti iste accusantium, unde quae.'
+  },
+  {
+    id: '4',
+    title: 'Medio Ambiente',
+    photo: 'twizy2.jpeg',
+    span: 'Soy',
+    paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sapiente distinctio dolorem, nemo explicabo nesciunt necessitatibus debitis consectetur consequatur itaque quos voluptas laboriosam porro, provident corrupti iste accusantium, unde quae.'
+  }
+]
+const getData = (id) => dataArray.find(data => data.id === id);
 
 export default getData;
