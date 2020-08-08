@@ -103,7 +103,7 @@ main::after {
 }
 
 .round {
-  width: 250px;
+  width: 60vw;
   height: 250px;
   border-radius: 50%;
   float: left;

@@ -1,7 +1,7 @@
 const dataArray = [
   {
     id: '1',
-    title: 'Familia',
+    title: 'Amo',
     photo: 'familia.png',
     span: 'Soy',
     paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime sapiente distinctio dolorem, nemo explicabo nesciunt necessitatibus debitis consectetur consequatur itaque quos voluptas laboriosam porro, provident corrupti iste accusantium, unde quae.'
