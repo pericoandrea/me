@@ -1,2 +1,4 @@
 *.7z
 node_modules
+shortcuts.md
+dist
