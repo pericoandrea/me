@@ -69,13 +69,14 @@ nav {
 
 .nav-footer {
   background-color: initial;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .nav-item {
   position: relative;
   margin: 20px 10px;
   box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.3);
+  max-height: 150px;
 }
 
 .nav-item img {
@@ -149,6 +150,7 @@ main p {
   position: relative;
   width: 180px;
   /* desired width */
+  max-height: initial;
 }
 
 .nav-footer .nav-item:before {
@@ -174,12 +176,13 @@ main p {
 
 footer {
   position: relative;
-  bottom: 0px;
+  margin-bottom: 10px;
 }
 
 footer .icons {
   display: flex;
   justify-content: space-evenly;
+  padding: 0 20px;
 }
 
 footer .icons a {
@@ -191,6 +194,7 @@ footer .icons span::before {
   color: #8a80a8;
   background: white;
   border-radius: 50%;
+  margin-left: 0;
 }
 
 @media screen and (max-width: 768px) {
